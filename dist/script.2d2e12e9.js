@@ -139,9 +139,9 @@ var Header = /*#__PURE__*/function () {
   }
 
   _createClass(Header, [{
-    key: "pushHeaderHtml",
-    value: function pushHeaderHtml() {
-      document.getElementById('main-div').innerHTML = headerHtml;
+    key: "pushHtml",
+    value: function pushHtml() {
+      return headerHtml;
     }
   }]);
 
@@ -159,7 +159,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // VARIABLES
 var header = new _header.default();
-header.pushHeaderHtml();
+$('#main-div').append(header.pushHtml());
 var apiKey = "36a9f2b15606d47bc645adaf271dc75d";
 var map = L.map('mapid').setView([46.71109, 1.7191036], 1);
 

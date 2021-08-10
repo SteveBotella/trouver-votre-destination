@@ -2,7 +2,7 @@ import Header from "./header";
 
 // VARIABLES
 const header = new Header();
-header.pushHeaderHtml();
+$('#main-div').append(header.pushHtml())
 
 const apiKey = "36a9f2b15606d47bc645adaf271dc75d";
 

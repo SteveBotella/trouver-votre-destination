@@ -6,8 +6,8 @@ let headerHtml =
     '</header>'
 
 class Header {
-    pushHeaderHtml() {
-        document.getElementById('main-div').innerHTML = headerHtml
+    pushHtml() {
+        return headerHtml
     }
 }
 
