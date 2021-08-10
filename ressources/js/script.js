@@ -1,5 +1,5 @@
 // VARIABLES
-const apiKey = "56b54737cee432fa16e84110b8e24e90";
+const apiKey = "36a9f2b15606d47bc645adaf271dc75d";
 
 const map = L.map('mapid').setView([46.71109, 1.7191036], 1);
 
@@ -96,5 +96,5 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: 'pk.eyJ1IjoicmRob3giLCJhIjoiY2tycWQycXhkMDZmNjMwbzRqMzlqb2h3NCJ9.w11nqRMKGflwuJMIJ8upTg'
+    accessToken: 'pk.eyJ1Ijoic3RldmVib3RlbGxhIiwiYSI6ImNrczVxN3BqejAzZHkydnBza3E3a2trMzYifQ.s08wtbyjTYd58J0ZTajvAg'
 }).addTo(map);
