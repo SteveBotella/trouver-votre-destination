@@ -117,8 +117,49 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"ressources/js/script.js":[function(require,module,exports) {
+})({"ressources/js/header.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var headerHtml = '<header\n' + '    class="h-32 w-screen bg-gradient-to-t from-yellow-500 to-yellow-200 flex flex-col justify-center items-center">\n' + '    <h1 class="text-3xl font-medium">Bienvenue sur Trouver votre Destination!</h1>\n' + '    <span>Et partez en toute tranquilité :D</span>\n' + '</header>';
+
+var Header = /*#__PURE__*/function () {
+  function Header() {
+    _classCallCheck(this, Header);
+  }
+
+  _createClass(Header, [{
+    key: "pushHeaderHtml",
+    value: function pushHeaderHtml() {
+      document.getElementById('main-div').innerHTML = headerHtml;
+    }
+  }]);
+
+  return Header;
+}();
+
+var _default = Header;
+exports.default = _default;
+},{}],"ressources/js/script.js":[function(require,module,exports) {
+"use strict";
+
+var _header = _interopRequireDefault(require("./header"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 // VARIABLES
+var header = new _header.default();
+header.pushHeaderHtml();
 var apiKey = "36a9f2b15606d47bc645adaf271dc75d";
 var map = L.map('mapid').setView([46.71109, 1.7191036], 1);
 
@@ -211,7 +252,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   zoomOffset: -1,
   accessToken: 'pk.eyJ1Ijoic3RldmVib3RlbGxhIiwiYSI6ImNrczVxN3BqejAzZHkydnBza3E3a2trMzYifQ.s08wtbyjTYd58J0ZTajvAg'
 }).addTo(map);
-},{}],"../../../.nvm/versions/node/v15.14.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./header":"ressources/js/header.js"}],"../../../.nvm/versions/node/v15.14.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -239,7 +280,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43161" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45899" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

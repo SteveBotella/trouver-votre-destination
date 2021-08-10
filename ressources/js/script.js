@@ -1,4 +1,9 @@
+import Header from "./header";
+
 // VARIABLES
+const header = new Header();
+header.pushHeaderHtml();
+
 const apiKey = "36a9f2b15606d47bc645adaf271dc75d";
 
 const map = L.map('mapid').setView([46.71109, 1.7191036], 1);
